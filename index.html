@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cute Website For You</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <button id="musicBtn" class="music-btn" aria-label="music">▶</button>
+  <audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mpeg" />
+  </audio>
+
+  <main class="app">
+    <section id="lockScreen" class="screen active">
+      <div class="cat big">😹</div>
+      <h1>Hi love, ayo tebak passwordnya,<br>I bet u knoww!!</h1>
+      <div id="dots" class="dots"></div>
+      <div class="keypad">
+        <button data-num="1">1</button><button data-num="2">2</button><button data-num="3">3</button>
+        <button data-num="4">4</button><button data-num="5">5</button><button data-num="6">6</button>
+        <button data-num="7">7</button><button data-num="8">8</button><button data-num="9">9</button>
+        <span></span><button data-num="0">0</button><button id="delBtn">⌫</button>
+      </div>
+      <p class="clue">clue : tanggal ulang tahun kamu</p>
+      <p id="wrongText" class="wrong"></p>
+    </section>
+
+    <section class="screen slide" data-page="0">
+      <div class="blob">💙</div>
+      <h2>hi, pretty 🫶🏻👋🏻</h2>
+      <button class="next">tap disinii &lt;3</button>
+    </section>
+
+    <section class="screen slide" data-page="1">
+      <div class="cat">😾</div>
+      <h2>OH GITU SEKARANG KAMU SAMA AKU? 😡</h2>
+      <button class="back">back</button>
+    </section>
+
+    <section class="screen slide" data-page="2">
+      <div class="cat flower">🐱🌸</div>
+      <h2>okayy last one, i made something for your birthday, read it slowly okayyy</h2>
+      <button class="next circle">&lt;3</button>
+    </section>
+
+    <section class="screen slide" data-page="3">
+      <div class="photo-card">taruh foto kalian di sini</div>
+      <h2 class="soft">I hope we keep creating memories, big and small, together</h2>
+      <button class="next">klik ini &lt;3</button>
+    </section>
+
+    <section class="screen slide" data-page="4">
+      <div class="spotify">
+        <div class="cover">🎀</div>
+        <div>
+          <h3>for u</h3>
+          <p>Lovee</p>
+          <small>⊕ Save on Spotify</small>
+        </div>
+        <div class="spotify-logo">◔</div>
+        <div class="controls">⏮ ▶ ⋯ ⏸</div>
+        <ol>
+          <li><b>Love Story</b><span>03:55</span></li>
+          <li>My Love Mine All Mine<span>02:17</span></li>
+          <li>Mine<span>03:51</span></li>
+        </ol>
+      </div>
+      <button class="next">Lanjut →</button>
+    </section>
+
+    <section id="letterScreen" class="screen slide" data-page="5">
+      <div id="falling"></div>
+      <article class="letter">
+        <h2>Happy birthday, my love 🤍🤍</h2>
+        <p id="typedText"></p>
+      </article>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

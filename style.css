@@ -1,0 +1,38 @@
+:root{
+  --blue:#064b96;
+  --soft-blue:#eaf2ff;
+  --text:#0b4d91;
+  --muted:#7b97b9;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  min-height:100vh;
+  background:linear-gradient(180deg,#f7fbff,#eef5ff);
+  font-family:"Baloo 2",system-ui,sans-serif;
+  color:var(--text);
+  overflow:hidden;
+}
+.app{width:min(100%,520px);height:100vh;margin:auto;position:relative;}
+.screen{
+  position:absolute;inset:0;display:none;flex-direction:column;align-items:center;justify-content:center;
+  padding:28px;text-align:center;animation:fade .35s ease;
+}
+.screen.active{display:flex}
+.music-btn{
+  position:fixed;right:22px;top:80px;z-index:10;width:58px;height:58px;border-radius:50%;
+  background:#fff;border:4px solid var(--blue);color:var(--blue);font-weight:800;font-size:22px;
+  box-shadow:0 8px 18px #c9d8ee;cursor:pointer;
+}
+h1,h2{font-size:clamp(25px,7vw,34px);line-height:1.12;margin:18px 0;font-weight:800;text-shadow:0 2px 0 #d9e8fb;}
+.cat{font-size:112px;filter:drop-shadow(0 8px 4px #c7d9ef);animation:float 2s infinite ease-in-out}.cat.big{font-size:120px}.flower{font-size:105px}.blob{font-size:100px;animation:float 2s infinite ease-in-out}
+.dots{display:flex;gap:18px;margin:18px 0 34px}.dot{width:22px;height:22px;border:4px solid var(--blue);border-radius:50%}.dot.filled{background:var(--blue)}
+.keypad{width:100%;display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:420px}.keypad button{
+  height:88px;border:0;border-radius:22px;background:white;color:var(--blue);font-size:38px;font-weight:800;
+  box-shadow:0 10px 20px #d7e3f3;cursor:pointer;font-family:inherit;transition:.15s;
+}.keypad button:active{transform:scale(.94)}.clue{font-size:22px;color:#6986a8;margin-top:28px}.wrong{min-height:28px;color:#e94466;font-size:20px;font-weight:800}
+button.next,button.back{
+  border:0;border-radius:999px;padding:13px 36px;background:var(--blue);color:white;font-family:inherit;
+  font-size:22px;font-weight:800;box-shadow:0 10px 0 #cbdaf0,0 18px 25px #d7e3f3;cursor:pointer;transition:.2s;
+}button.next:active,button.back:active{transform:translateY(5px);box-shadow:0 5px 0 #cbdaf0}.circle{width:86px;height:86px;padding:0;border-radius:50%}.soft{color:#9ab0cd}.photo-card{width:86%;height:180px;border-radius:22px;background:linear-gradient(135deg,#dbeaff,#fff);display:grid;place-items:center;color:#91a9c8;font-size:22px;font-weight:800;box-shadow:0 12px 25px #d7e3f3;margin-bottom:20px}.spotify{position:relative;width:92%;background:#7b4558;color:white;border-radius:20px;padding:24px;text-align:left;box-shadow:0 16px 30px #d7e3f3;margin-bottom:34px}.cover{float:left;width:140px;height:140px;background:#fff;border-radius:14px;margin-right:20px;display:grid;place-items:center;font-size:70px}.spotify h3{font-size:36px;margin:20px 0 0}.spotify p{font-size:24px;margin:0;color:#ffddec}.spotify small{font-size:20px}.spotify-logo{position:absolute;right:24px;top:30px;font-size:34px}.controls{clear:both;text-align:center;font-size:38px;padding:20px 0 10px}.spotify ol{margin:0;padding:0;list-style:none}.spotify li{display:flex;justify-content:space-between;padding:11px 14px;border-radius:10px;font-size:20px}.spotify li:first-child{background:#552239}.letter{width:100%;text-align:left;z-index:2}.letter h2{text-align:center;font-size:30px}.letter p{border-left:6px solid #2b83df;padding-left:28px;font-size:22px;line-height:1.7;color:#194f88;min-height:260px}.heart{position:absolute;top:-40px;font-size:34px;animation:fall linear forwards;z-index:1;pointer-events:none}@keyframes fade{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}@keyframes float{50%{transform:translateY(-14px)}}@keyframes fall{to{transform:translateY(110vh) rotate(360deg);opacity:.7}}
+@media(max-width:420px){.keypad button{height:76px}.spotify{width:100%;padding:18px}.cover{width:110px;height:110px}.music-btn{top:62px}}
