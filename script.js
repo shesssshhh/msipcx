@@ -56,7 +56,9 @@ function showSlide(n){
 }
 
 document.querySelectorAll(".next").forEach(btn=>btn.addEventListener("click",()=>showSlide(page+1)));
-document.querySelectorAll(".back").forEach(btn=>btn.addEventListener("click",()=>showSlide(0)));
+document.querySelectorAll(".back").forEach(btn=>btn.addEventListener("click",()=> {
+  if(page > 0) showSlide(page-1);
+}));
 
 musicBtn.addEventListener("click", async()=>{
   try{
